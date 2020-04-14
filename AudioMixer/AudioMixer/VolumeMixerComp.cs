@@ -45,7 +45,7 @@ namespace AudioMixer
             set
             {
                 backgroundColor = value;
-                ChangeBackgroundColor();
+                SetBackgroundColor();
                 Invalidate();
             }
         }
@@ -60,7 +60,7 @@ namespace AudioMixer
             set
             {
                 trackBarColor = value;
-                ChangeEveryTrackBarColor();
+                SetEveryTrackBarColor();
                 Invalidate();
             }
         }
@@ -75,7 +75,7 @@ namespace AudioMixer
             set
             {
                 trackBarNameColor = value;
-                ChangeEveryNameColor();
+                SetEveryNameColor();
                 Invalidate();
             }
         }
@@ -90,7 +90,7 @@ namespace AudioMixer
             set
             {
                 trackBarValueColor = value;
-                ChangeEveryValueColor();
+                SetEveryValueColor();
                 Invalidate();
             }
         }
@@ -289,7 +289,7 @@ namespace AudioMixer
         }
 
 
-        public void ChangeTrackBarColorAt(int i, Color color)
+        public void SetTrackBarColorAt(int i, Color color)
         {
             try
             {
@@ -316,7 +316,7 @@ namespace AudioMixer
                 return v;
             }
         }
-        private void ChangeEveryNameColor()
+        private void SetEveryNameColor()
         {
             try
             {
@@ -331,7 +331,7 @@ namespace AudioMixer
             }
         }
 
-        private void ChangeEveryValueColor()
+        private void SetEveryValueColor()
         {
             try
             {
@@ -347,7 +347,7 @@ namespace AudioMixer
         }
 
 
-        private void ChangeEveryTrackBarColor()
+        private void SetEveryTrackBarColor()
         {
             try
             {
@@ -362,7 +362,7 @@ namespace AudioMixer
             }
         }
 
-        private void ChangeBackgroundColor()
+        private void SetBackgroundColor()
         {
             try
             {
