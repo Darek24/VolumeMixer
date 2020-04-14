@@ -172,6 +172,7 @@ namespace AudioMixer
                 nameList[i].TabIndex = 4;
                 nameList[i].Text = "Google Chrome " + (i + 1);
                 nameList[i].TextAlign = HorizontalAlignment.Center;
+                nameList[i].BackColor = trackBarNameColor;
 
                 numberList[i].Dock = DockStyle.Fill;
                 numberList[i].Location = new Point(3, 315);
@@ -181,7 +182,7 @@ namespace AudioMixer
                 numberList[i].TabIndex = 5;
                 numberList[i].Text = "0";
                 numberList[i].TextAlign = HorizontalAlignment.Center;
-
+                numberList[i].BackColor = trackBarValueColor;
 
                 trackBarList[i].Dock = DockStyle.Fill;
                 trackBarList[i].LargeChange = 10;
@@ -194,6 +195,7 @@ namespace AudioMixer
                 trackBarList[i].TabIndex = 1;
                 trackBarList[i].TickFrequency = 10;
                 trackBarList[i].Scroll += new EventHandler(TrackBar_Scroll);
+                trackBarList[i].BackColor = trackBarColor;
 
                 panelList[i].Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right);
                 panelList[i].ColumnCount = 1;
@@ -210,12 +212,10 @@ namespace AudioMixer
                 panelList[i].Size = new Size(146, 348);
                 panelList[i].TabIndex = 2;
 
-
                 mainPanel.Controls.Add(panelList[i], i, 0);
 
             }
         }
-
 
 
         public void ChangeTrackBarAt(int i,string name, int value )
@@ -236,6 +236,7 @@ namespace AudioMixer
             try
             {
                 trackBarList[i].BackColor = color;
+                
             }
             catch (Exception e)
             {
@@ -243,7 +244,7 @@ namespace AudioMixer
             }
         }
 
-        public void ChangeEveryNameColor()
+        private void ChangeEveryNameColor()
         {
             try
             {
@@ -258,7 +259,7 @@ namespace AudioMixer
             }
         }
 
-        public void ChangeEveryValueColor()
+        private void ChangeEveryValueColor()
         {
             try
             {
