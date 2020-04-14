@@ -1,0 +1,14 @@
+C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\TestFormsApp\bin\Debug\TestFormsApp.exe.config
+C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\TestFormsApp\bin\Debug\TestFormsApp.exe
+C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\TestFormsApp\bin\Debug\TestFormsApp.pdb
+C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\TestFormsApp\bin\Debug\AudioMixer.dll
+C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\TestFormsApp\bin\Debug\AudioMixer.pdb
+C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\TestFormsApp\bin\Debug\AudioMixer.dll.config
+C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\TestFormsApp\obj\Debug\TestFormsApp.csprojAssemblyReference.cache
+C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\TestFormsApp\obj\Debug\TestFormsApp.Properties.Resources.resources
+C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\TestFormsApp\obj\Debug\TestFormsApp.csproj.GenerateResource.cache
+C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\TestFormsApp\obj\Debug\TestFormsApp.csproj.CoreCompileInputs.cache
+C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\TestFormsApp\obj\Debug\TestFormsApp.csproj.CopyComplete
+C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\TestFormsApp\obj\Debug\TestFormsApp.exe
+C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\TestFormsApp\obj\Debug\TestFormsApp.pdb
+C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\TestFormsApp\obj\Debug\TestFormsApp.Form1.resources
