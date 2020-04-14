@@ -36,16 +36,20 @@ namespace AudioMixer
             // 
             // volumeMixerComp1
             // 
+            int[] numberArray = new int[] {150,-100,15,14,130,2,50,32,1230,10};
+            String[] nameArray = new string[] { "System", "Eclipse", "NetBeans", "Visual Studio", "Opera", "Chrome", "Egde" };
             this.volumeMixerComp1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.volumeMixerComp1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.volumeMixerComp1.Location = new System.Drawing.Point(230, 179);
+            this.volumeMixerComp1.Location = new System.Drawing.Point(208, 160);
             this.volumeMixerComp1.Name = "volumeMixerComp1";
-            this.volumeMixerComp1.Size = new System.Drawing.Size(706, 350);
+            this.volumeMixerComp1.Size = new System.Drawing.Size(687, 334);
             this.volumeMixerComp1.TabIndex = 4;
             this.volumeMixerComp1.TrackBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.volumeMixerComp1.TrackBarNameColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.volumeMixerComp1.TrackBarNumber = 5;
+            this.volumeMixerComp1.TrackBarNumber = 6;
             this.volumeMixerComp1.TrackBarValueColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.volumeMixerComp1.SetEveryTrackBarValue(numberArray);
+            this.volumeMixerComp1.SetEveryTrackBarName(nameArray);
             // 
             // TestForm
             // 

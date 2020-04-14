@@ -218,25 +218,25 @@ namespace AudioMixer
         }
 
 
-        public void ChangeTrackBarAt(int i,string name, int value )
+        public void SetTrackBarValueAt(int i, int value )
         {
             try
             {
-                nameList[i].Text = name;
-                trackBarList[i].Value = value;
+                trackBarList[i].Value = CheckValue(value);
+                numberList[i].Text = CheckValue(value).ToString();
+                Invalidate();
             }
             catch(Exception e)
             {
                 throw e;
             }
         }
-
-        public void ChangeTrackBarColorAt(int i, Color color)
+        public void SetTrackBarNameAt(int i, string name)
         {
             try
             {
-                trackBarList[i].BackColor = color;
-                
+                nameList[i].Text = name;
+                Invalidate();
             }
             catch (Exception e)
             {
@@ -244,6 +244,78 @@ namespace AudioMixer
             }
         }
 
+        public void SetEveryTrackBarValue(int[] tab)
+        {
+            try
+            {
+                int n = tab.Length;
+                if(tab.Length>=trackBarNumber)
+                {
+                    n = trackBarNumber;
+                }
+                for (int i = 0; i < n ; i++)
+                {
+                    SetTrackBarValueAt(i, tab[i]);
+                }
+
+                Invalidate();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public void SetEveryTrackBarName(String[] tab)
+        {
+            try
+            {
+                int n = tab.Length;
+                if (tab.Length >= trackBarNumber)
+                {
+                    n = trackBarNumber;
+                }
+                for (int i = 0; i < n; i++)
+                {
+                    SetTrackBarNameAt(i, tab[i]);
+                }
+
+                Invalidate();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+
+        public void ChangeTrackBarColorAt(int i, Color color)
+        {
+            try
+            {
+                trackBarList[i].BackColor = color;
+                Invalidate();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        private int CheckValue(int v)
+        {
+            if(v<0)
+            {
+                return 0;
+            }
+            else if(v>100)
+            {
+                return 100;
+            }
+            else
+            {
+                return v;
+            }
+        }
         private void ChangeEveryNameColor()
         {
             try
