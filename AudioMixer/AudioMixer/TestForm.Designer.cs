@@ -48,7 +48,7 @@ namespace AudioMixer
             // 
             this.volumeMixerComp1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.volumeMixerComp1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.volumeMixerComp1.Location = new System.Drawing.Point(148, 168);
+            this.volumeMixerComp1.Location = new System.Drawing.Point(177, 166);
             this.volumeMixerComp1.Name = "volumeMixerComp1";
             this.volumeMixerComp1.NamesArray = new string[] {
         "Opera",
@@ -58,8 +58,9 @@ namespace AudioMixer
         "Egde",
         "NetBeans",
         "Visual Studio"};
-            this.volumeMixerComp1.Size = new System.Drawing.Size(769, 373);
+            this.volumeMixerComp1.Size = new System.Drawing.Size(761, 364);
             this.volumeMixerComp1.TabIndex = 6;
+            this.volumeMixerComp1.TickFrequencyValue = 5;
             this.volumeMixerComp1.TrackBarColor = System.Drawing.Color.MintCream;
             this.volumeMixerComp1.TrackBarNameColor = System.Drawing.Color.Gray;
             this.volumeMixerComp1.TrackBarNumber = 7;

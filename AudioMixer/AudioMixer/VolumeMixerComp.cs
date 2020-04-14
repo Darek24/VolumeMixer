@@ -20,7 +20,7 @@ namespace AudioMixer
         string[] namesArray = { };
         int[] valuesArray = { };
 
-        int trackBarNumber;
+        int trackBarNumber, tickFrequencyValue;
         Color backgroundColor, trackBarColor, trackBarNameColor, trackBarValueColor;
 
         [Category("Component Settings"), Description("Number of trackbars")]
@@ -129,6 +129,22 @@ namespace AudioMixer
                 Invalidate();
             }
         }
+
+        [Category("Component Settings"), Description("Value of trackbars' tick frequency")]
+        public int TickFrequencyValue
+        {
+            get
+            {
+                return tickFrequencyValue;
+            }
+            set
+            {
+                tickFrequencyValue = value;
+                SetTickFrequencyValue();
+                Invalidate();
+            }
+        }
+
 
 
         public VolumeMixerComp()
@@ -406,6 +422,20 @@ namespace AudioMixer
             try
             {
                 mainPanel.BackColor = BackgroundColor;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        private void SetTickFrequencyValue()
+        {
+            try
+            {
+                for (int i = 0; i < trackBarNumber; i++)
+                {
+                    trackBarList[i].TickFrequency = tickFrequencyValue;
+                }
             }
             catch (Exception e)
             {
