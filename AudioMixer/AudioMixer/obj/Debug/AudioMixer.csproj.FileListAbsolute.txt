@@ -1,0 +1,11 @@
+C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\AudioMixer\bin\Debug\AudioMixer.exe.config
+C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\AudioMixer\bin\Debug\AudioMixer.exe
+C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\AudioMixer\bin\Debug\AudioMixer.pdb
+C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\AudioMixer\obj\Debug\AudioMixer.csprojAssemblyReference.cache
+C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\AudioMixer\obj\Debug\AudioMixer.Properties.Resources.resources
+C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\AudioMixer\obj\Debug\AudioMixer.TestForm.resources
+C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\AudioMixer\obj\Debug\AudioMixer.csproj.GenerateResource.cache
+C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\AudioMixer\obj\Debug\AudioMixer.csproj.CoreCompileInputs.cache
+C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\AudioMixer\obj\Debug\AudioMixer.exe
+C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\AudioMixer\obj\Debug\AudioMixer.pdb
+C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\AudioMixer\obj\Debug\AudioMixer.VolumeMixerComp.resources
