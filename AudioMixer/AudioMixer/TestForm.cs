@@ -23,8 +23,9 @@ namespace AudioMixer
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            volumeMixerComp1.SetEveryTrackBarName(stringArray);
-            volumeMixerComp1.SetEveryTrackBarValue(numberArray);
+            volumeMixerComp1.ValuesArray = numberArray;
+            volumeMixerComp1.NamesArray = stringArray;
         }
+
     }
 }

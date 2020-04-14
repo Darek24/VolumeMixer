@@ -47,23 +47,39 @@ namespace AudioMixer
             // volumeMixerComp1
             // 
             this.volumeMixerComp1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.volumeMixerComp1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.volumeMixerComp1.Location = new System.Drawing.Point(180, 166);
+            this.volumeMixerComp1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.volumeMixerComp1.Location = new System.Drawing.Point(148, 168);
             this.volumeMixerComp1.Name = "volumeMixerComp1";
-            this.volumeMixerComp1.Size = new System.Drawing.Size(729, 389);
-            this.volumeMixerComp1.TabIndex = 4;
-            this.volumeMixerComp1.TrackBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.volumeMixerComp1.TrackBarNameColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.volumeMixerComp1.TrackBarNumber = 6;
-            this.volumeMixerComp1.TrackBarValueColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.volumeMixerComp1.NamesArray = new string[] {
+        "Opera",
+        "Chrome",
+        "Mozilla ",
+        "Internet Explorer",
+        "Egde",
+        "NetBeans",
+        "Visual Studio"};
+            this.volumeMixerComp1.Size = new System.Drawing.Size(769, 373);
+            this.volumeMixerComp1.TabIndex = 6;
+            this.volumeMixerComp1.TrackBarColor = System.Drawing.Color.MintCream;
+            this.volumeMixerComp1.TrackBarNameColor = System.Drawing.Color.Gray;
+            this.volumeMixerComp1.TrackBarNumber = 7;
+            this.volumeMixerComp1.TrackBarValueColor = System.Drawing.Color.Lime;
+            this.volumeMixerComp1.ValuesArray = new int[] {
+        -130,
+        5,
+        120,
+        53,
+        23,
+        39,
+        0};
             // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1164, 687);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.volumeMixerComp1);
+            this.Controls.Add(this.button1);
             this.Name = "TestForm";
             this.Text = "Volume Mixer Display";
             this.ResumeLayout(false);
@@ -71,8 +87,8 @@ namespace AudioMixer
         }
 
         #endregion
-        private VolumeMixerComp volumeMixerComp1;
         private System.Windows.Forms.Button button1;
+        private VolumeMixerComp volumeMixerComp1;
     }
 }
 

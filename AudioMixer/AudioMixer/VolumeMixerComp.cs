@@ -17,6 +17,9 @@ namespace AudioMixer
         List<TrackBar> trackBarList;
         List<TableLayoutPanel> panelList;
 
+        string[] namesArray = { };
+        int[] valuesArray = { };
+
         int trackBarNumber;
         Color backgroundColor, trackBarColor, trackBarNameColor, trackBarValueColor;
 
@@ -31,6 +34,8 @@ namespace AudioMixer
             {
                 trackBarNumber = value;
                 CreateTrackBars();
+                SetEveryTrackBarValue();
+                SetEveryTrackBarName();
                 Invalidate();
             }
         }
@@ -94,6 +99,37 @@ namespace AudioMixer
                 Invalidate();
             }
         }
+
+        [Category("Component Settings"), Description("Names of trackbars")]
+        public string[] NamesArray
+        {
+            get
+            {
+                return namesArray;
+            }
+            set
+            {
+                namesArray = value;
+                SetEveryTrackBarName();
+                Invalidate();
+            }
+        }
+
+        [Category("Component Settings"), Description("Values of trackbars")]
+        public int[] ValuesArray
+        {
+            get
+            {
+                return valuesArray;
+            }
+            set
+            {
+                valuesArray = value;
+                SetEveryTrackBarValue();
+                Invalidate();
+            }
+        }
+
 
         public VolumeMixerComp()
         {
@@ -243,11 +279,25 @@ namespace AudioMixer
                 throw e;
             }
         }
-
-        public void SetEveryTrackBarValue(int[] tab)
+        public void SetTrackBarColorAt(int i, Color color)
         {
             try
             {
+                trackBarList[i].BackColor = color;
+                Invalidate();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+
+        private void SetEveryTrackBarValue()
+        {
+            try
+            {
+                int[] tab = valuesArray;
                 int n = tab.Length;
                 if(tab.Length>=trackBarNumber)
                 {
@@ -266,10 +316,11 @@ namespace AudioMixer
             }
         }
 
-        public void SetEveryTrackBarName(String[] tab)
+        private void SetEveryTrackBarName()
         {
             try
             {
+                string[] tab = namesArray;
                 int n = tab.Length;
                 if (tab.Length >= trackBarNumber)
                 {
@@ -289,18 +340,6 @@ namespace AudioMixer
         }
 
 
-        public void SetTrackBarColorAt(int i, Color color)
-        {
-            try
-            {
-                trackBarList[i].BackColor = color;
-                Invalidate();
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-        }
         private int CheckValue(int v)
         {
             if(v<0)
