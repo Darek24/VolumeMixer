@@ -18,7 +18,7 @@ namespace AudioMixer
         List<TableLayoutPanel> panelList;
 
         int trackBarNumber;
-        Color backgroundColor;
+        Color backgroundColor, trackBarColor, trackBarNameColor, trackBarValueColor;
 
         [Category("Component Settings"), Description("Number of trackbars")]
         public int TrackBarNumber
@@ -30,7 +30,7 @@ namespace AudioMixer
             set
             {
                 trackBarNumber = value;
-                CreateTrackBars(value);
+                CreateTrackBars();
                 Invalidate();
             }
         }
@@ -50,7 +50,50 @@ namespace AudioMixer
             }
         }
 
+        [Category("Component Settings"), Description("Trackbar Color")]
+        public Color TrackBarColor
+        {
+            get
+            {
+                return trackBarColor;
+            }
+            set
+            {
+                trackBarColor = value;
+                ChangeEveryTrackBarColor();
+                Invalidate();
+            }
+        }
 
+        [Category("Component Settings"), Description("Color of trackbar name")]
+        public Color TrackBarNameColor
+        {
+            get
+            {
+                return trackBarNameColor;
+            }
+            set
+            {
+                trackBarNameColor = value;
+                ChangeEveryNameColor();
+                Invalidate();
+            }
+        }
+
+        [Category("Component Settings"), Description("Color of trackbar value")]
+        public Color TrackBarValueColor
+        {
+            get
+            {
+                return trackBarValueColor;
+            }
+            set
+            {
+                trackBarValueColor = value;
+                ChangeEveryValueColor();
+                Invalidate();
+            }
+        }
 
         public VolumeMixerComp()
         {
@@ -67,15 +110,15 @@ namespace AudioMixer
             panelList = new List<TableLayoutPanel>();
         }
 
-        public void RemoveTrackBars()
+        private void RemoveTrackBars()
         {
             for (int i = nameList.Count - 1; i >= 0; i--)
             {
-                MainPanel.Controls.Remove(panelList[i]);
+                mainPanel.Controls.Remove(panelList[i]);
+
                 panelList[i].Controls.Remove(nameList[i]);
                 panelList[i].Controls.Remove(numberList[i]);
                 panelList[i].Controls.Remove(trackBarList[i]);
-
 
                 trackBarList[i].Scroll -= new EventHandler(TrackBar_Scroll);
 
@@ -89,13 +132,18 @@ namespace AudioMixer
                 trackBarList.RemoveAt(i);
                 panelList.RemoveAt(i);
             }
+            for (int i = mainPanel.ColumnStyles.Count - 1; i >= 0; i--)
+            {
+                mainPanel.ColumnStyles.RemoveAt(i);
+            }
+
+
         }
 
-        public void CreateTrackBars(int n)
+        private void CreateTrackBars()
         {
             RemoveTrackBars();
 
-            trackBarNumber = n;
             for (int i = 0; i < trackBarNumber; i++)
             {
                 panelList.Add(new TableLayoutPanel());
@@ -106,64 +154,69 @@ namespace AudioMixer
 
                 trackBarList.Add(new TrackBar());
             }
-
+            mainPanel.ColumnCount = trackBarNumber;
+            for (int i = 0; i < trackBarNumber; i++)
+            {
+                mainPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F / trackBarNumber));
+            }
+            mainPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 0F));
 
             for (int i = 0; i < trackBarNumber; i++)
             {
-                MainPanel.Controls.Add(panelList[i]);
 
-                panelList[i].Name = "LayoutPanel" + i;
-                panelList[i].AutoSize = true;
-                panelList[i].AutoSizeMode = AutoSizeMode.GrowAndShrink;
-                panelList[i].ColumnCount = 1;
-                panelList[i].ColumnStyles.Add(new ColumnStyle());
-                panelList[i].Controls.Add(numberList[i], 0, 2);
-                panelList[i].Controls.Add(nameList[i], 0, 0);
-                panelList[i].Controls.Add(trackBarList[i], 0, 1);
-                panelList[i].Location = new Point(3, 3);
-                panelList[i].Name = "panelList[i]";
-                panelList[i].RowCount = 3;
-                panelList[i].RowStyles.Add(new RowStyle());
-                panelList[i].RowStyles.Add(new RowStyle());
-                panelList[i].RowStyles.Add(new RowStyle());
-                panelList[i].Size = new Size(111, 261);
-                panelList[i].TabIndex = 2;
+                nameList[i].Dock = DockStyle.Fill;
+                nameList[i].Location = new Point(3, 3);
+                nameList[i].Name = "nameTextBox" + i;
+                nameList[i].ReadOnly = true;
+                nameList[i].Size = new Size(140, 20);
+                nameList[i].TabIndex = 4;
+                nameList[i].Text = "Google Chrome " + (i + 1);
+                nameList[i].TextAlign = HorizontalAlignment.Center;
 
+                numberList[i].Dock = DockStyle.Fill;
+                numberList[i].Location = new Point(3, 315);
                 numberList[i].Name = "numberTextBox" + i;
-                numberList[i].Anchor = AnchorStyles.None;
-                numberList[i].Location = new Point(40, 238);
                 numberList[i].ReadOnly = true;
-                numberList[i].Size = new Size(30, 20);
+                numberList[i].Size = new Size(140, 20);
                 numberList[i].TabIndex = 5;
                 numberList[i].Text = "0";
                 numberList[i].TextAlign = HorizontalAlignment.Center;
 
 
-                nameList[i].Name = "nameTextBox" + i;
-                nameList[i].Text = "Google Chrome " + (i + 1);
-                nameList[i].Anchor = AnchorStyles.None;
-                nameList[i].Location = new Point(3, 3);
-                nameList[i].ReadOnly = true;
-                nameList[i].Size = new Size(105, 20);
-                nameList[i].TabIndex = 4;
-                nameList[i].TextAlign = HorizontalAlignment.Center;
-
-                trackBarList[i].Name = "trackBar" + i;
-                trackBarList[i].Value = 0;
-                trackBarList[i].Anchor = AnchorStyles.None;
+                trackBarList[i].Dock = DockStyle.Fill;
                 trackBarList[i].LargeChange = 10;
-                trackBarList[i].Location = new Point(33, 29);
+                trackBarList[i].Location = new Point(3, 37);
                 trackBarList[i].Maximum = 100;
+                trackBarList[i].Name = "trackBar" + i;
                 trackBarList[i].Orientation = Orientation.Vertical;
-                trackBarList[i].Size = new Size(45, 200);
+                trackBarList[i].Size = new Size(140, 272);
                 trackBarList[i].SmallChange = 5;
                 trackBarList[i].TabIndex = 1;
                 trackBarList[i].TickFrequency = 10;
                 trackBarList[i].Scroll += new EventHandler(TrackBar_Scroll);
 
-            }
+                panelList[i].Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right);
+                panelList[i].ColumnCount = 1;
+                panelList[i].ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+                panelList[i].Controls.Add(numberList[i], 0, 2);
+                panelList[i].Controls.Add(nameList[i], 0, 0);
+                panelList[i].Controls.Add(trackBarList[i], 0, 1);
+                panelList[i].Location = new Point(3, 3);
+                panelList[i].Name = "Panel" + i;
+                panelList[i].RowCount = 3;
+                panelList[i].RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+                panelList[i].RowStyles.Add(new RowStyle(SizeType.Percent, 80F));
+                panelList[i].RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+                panelList[i].Size = new Size(146, 348);
+                panelList[i].TabIndex = 2;
 
+
+                mainPanel.Controls.Add(panelList[i], i, 0);
+
+            }
         }
+
+
 
         public void ChangeTrackBarAt(int i,string name, int value )
         {
@@ -190,13 +243,44 @@ namespace AudioMixer
             }
         }
 
-        public void ChangeEveryTrackBarColor(Color color)
+        public void ChangeEveryNameColor()
         {
             try
             {
                 for (int i = 0; i < trackBarNumber; i++)
                 {
-                    trackBarList[i].BackColor = color;
+                    nameList[i].BackColor = trackBarNameColor;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public void ChangeEveryValueColor()
+        {
+            try
+            {
+                for (int i = 0; i < trackBarNumber; i++)
+                {
+                    numberList[i].BackColor = trackBarValueColor;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+
+        private void ChangeEveryTrackBarColor()
+        {
+            try
+            {
+                for (int i = 0; i < trackBarNumber; i++)
+                {
+                    trackBarList[i].BackColor = trackBarColor;
                 }
             }
             catch (Exception e)
@@ -209,21 +293,12 @@ namespace AudioMixer
         {
             try
             {
-                MainPanel.BackColor = BackgroundColor;
+                mainPanel.BackColor = BackgroundColor;
             }
             catch (Exception e)
             {
                 throw e;
             }
-        }
-
-
-        private void SetPositionAndSize()
-        {
-            //float scaleX = ((float)this.NewWidth / this.BaseWidth);
-            //float scaleY = ((float)formNewHeight / formBaseHeight);
-            //this.Scale(new SizeF(scaleX, scaleY));
-
         }
 
         private void TrackBar_Scroll(object sender, EventArgs e)
@@ -236,38 +311,6 @@ namespace AudioMixer
             numberList[i].Text = tkbar.Value.ToString();
 
         }
-        //protected override void OnResize(EventArgs e)
-        //{
-        //    base.OnResize(e);
-        //    SetPositionAndSize();
-        //}
-
-
-        //private Size oldSize;
-        //private void Form1_Load(object sender, EventArgs e) => oldSize = Size;
-
-        //protected override void OnResize(System.EventArgs e)
-        //{
-        //    base.OnResize(e);
-
-        //    foreach (Control cnt in Controls)
-        //        ResizeAll(cnt, Size);
-
-        //    oldSize = Size;
-        //}
-        //private void ResizeAll(Control control, Size newSize)
-        //{
-        //    int width = newSize.Width - oldSize.Width;
-        //    control.Left += (control.Left * width) / oldSize.Width;
-        //    control.Width += (control.Width * width) / oldSize.Width;
-
-        //    int height = newSize.Height - oldSize.Height;
-        //    control.Top += (control.Top * height) / oldSize.Height;
-        //    control.Height += (control.Height * height) / oldSize.Height;
-        //}
-
-
-
 
     }
 }

@@ -40,7 +40,7 @@ namespace AudioMixer
         {
             this.testBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.volumeMixerComp2 = new AudioMixer.VolumeMixerComp();
+            this.volumeMixerComp1 = new AudioMixer.VolumeMixerComp();
             this.SuspendLayout();
             // 
             // testBox
@@ -60,22 +60,25 @@ namespace AudioMixer
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // volumeMixerComp2
+            // volumeMixerComp1
             // 
-            this.volumeMixerComp2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.volumeMixerComp2.BackgroundColor = System.Drawing.Color.Empty;
-            this.volumeMixerComp2.Location = new System.Drawing.Point(357, 217);
-            this.volumeMixerComp2.Name = "volumeMixerComp2";
-            this.volumeMixerComp2.Size = new System.Drawing.Size(272, 328);
-            this.volumeMixerComp2.TabIndex = 5;
-            this.volumeMixerComp2.TrackBarNumber = 0;
+            this.volumeMixerComp1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.volumeMixerComp1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.volumeMixerComp1.Location = new System.Drawing.Point(211, 206);
+            this.volumeMixerComp1.Name = "volumeMixerComp1";
+            this.volumeMixerComp1.Size = new System.Drawing.Size(642, 344);
+            this.volumeMixerComp1.TabIndex = 4;
+            this.volumeMixerComp1.TrackBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.volumeMixerComp1.TrackBarNameColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.volumeMixerComp1.TrackBarNumber = 5;
+            this.volumeMixerComp1.TrackBarValueColor = System.Drawing.Color.Blue;
             // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1164, 687);
-            this.Controls.Add(this.volumeMixerComp2);
+            this.Controls.Add(this.volumeMixerComp1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.testBox);
             this.Name = "TestForm";
@@ -88,7 +91,7 @@ namespace AudioMixer
         #endregion
         private System.Windows.Forms.TextBox testBox;
         private System.Windows.Forms.Button button1;
-        private VolumeMixerComp volumeMixerComp2;
+        private VolumeMixerComp volumeMixerComp1;
     }
 }
 
