@@ -12,8 +12,8 @@ namespace TestFormsApp
 {
     public partial class Form1 : Form
     {
-        readonly string[] stringArray = { "Android Studio", "Skype", "Windows Explorer", "Media Player", "WinAmp", "KMPlayer", "NVIDIA" };
-        readonly int[] intArray = { 150, 20, 13, 19, -100, 40, 30 };
+        readonly List<string> stringArray = new List<string> { "Android Studio", "Skype", "Windows Explorer", "Media Player", "WinAmp", "KMPlayer", "NVIDIA" };
+        readonly List<int> intArray = new List<int>{ 150, 20, 13, 19, -100, 40, 30 };
 
         public Form1()
         {

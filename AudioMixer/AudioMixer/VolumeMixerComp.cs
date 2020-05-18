@@ -17,8 +17,9 @@ namespace AudioMixer
         List<TrackBar> trackBarList;
         List<TableLayoutPanel> panelList;
 
-        string[] namesArray = { };
-        int[] valuesArray = { };
+        
+        List<string> namesArray = new List<string> { };
+        List<int> valuesArray = new List<int> ();
 
         int trackBarNumber, tickFrequencyValue;
         Color backgroundColor, trackBarColor, trackBarNameColor, trackBarValueColor;
@@ -33,12 +34,15 @@ namespace AudioMixer
             set
             {
                 trackBarNumber = value;
+                CheckValuesArray();
+                CheckNamesArray();
                 CreateTrackBars();
                 SetEveryTrackBarValue();
                 SetEveryTrackBarName();
                 Invalidate();
             }
         }
+
 
         [Category("Component Settings"), Description("Background Color")]
         public Color BackgroundColor
@@ -100,31 +104,43 @@ namespace AudioMixer
             }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
+        [Editor("System.Windows.Forms.Design.StringCollectionEditor, System.Design, Culture = neutral, PublicKeyToken=b03f5f7f11d50a3a",
+            typeof(System.Drawing.Design.UITypeEditor))]
+
         [Category("Component Settings"), Description("Names of trackbars")]
-        public string[] NamesArray
+        public List<string> NamesArray
         {
             get
             {
+                SetEveryTrackBarName();
+                Invalidate();
                 return namesArray;
+             
             }
             set
             {
                 namesArray = value;
                 SetEveryTrackBarName();
                 Invalidate();
-            }
+            }   
         }
 
+
         [Category("Component Settings"), Description("Values of trackbars")]
-        public int[] ValuesArray
+        public List<int> ValuesArray
         {
             get
             {
+                ChangeValuesOfValueArray();
+                SetEveryTrackBarValue();
+                Invalidate();
                 return valuesArray;
             }
             set
             {
                 valuesArray = value;
+                ChangeValuesOfValueArray();
                 SetEveryTrackBarValue();
                 Invalidate();
             }
@@ -146,12 +162,12 @@ namespace AudioMixer
         }
 
 
-
         public VolumeMixerComp()
         {
             InitializeComponent();
 
             InitializeLists();
+            
         }
 
         private void InitializeLists()
@@ -313,15 +329,15 @@ namespace AudioMixer
         {
             try
             {
-                int[] tab = valuesArray;
-                int n = tab.Length;
-                if(tab.Length>=trackBarNumber)
+                List<int> tab = valuesArray;
+                int n = tab.Count();
+                if(tab.Count()>=trackBarNumber)
                 {
                     n = trackBarNumber;
                 }
                 for (int i = 0; i < n ; i++)
                 {
-                    SetTrackBarValueAt(i, tab[i]);
+                    SetTrackBarValueAt(i, tab.ElementAt(i));
                 }
 
                 Invalidate();
@@ -336,15 +352,15 @@ namespace AudioMixer
         {
             try
             {
-                string[] tab = namesArray;
-                int n = tab.Length;
-                if (tab.Length >= trackBarNumber)
+                List<string> tab = namesArray;
+                int n = tab.Count();
+                if (tab.Count() >= trackBarNumber)
                 {
                     n = trackBarNumber;
                 }
                 for (int i = 0; i < n; i++)
                 {
-                    SetTrackBarNameAt(i, tab[i]);
+                    SetTrackBarNameAt(i, tab.ElementAt(i));
                 }
 
                 Invalidate();
@@ -354,7 +370,57 @@ namespace AudioMixer
                 throw e;
             }
         }
+        private void CheckValuesArray()
+        {
 
+            if (trackBarNumber > valuesArray.Count())
+            {
+                for (int i = trackBarNumber - valuesArray.Count(); i > 0; i--)
+                {
+                    valuesArray.Add(50);
+                }
+            }   
+            else if (trackBarNumber < valuesArray.Count())
+            {
+                for (int i = valuesArray.Count() - 1; i >= trackBarNumber; i--)
+                {
+                    valuesArray.RemoveAt(i);
+                }
+            }
+
+        }
+
+        private void CheckNamesArray()
+        {
+            if (trackBarNumber > namesArray.Count())
+            {
+                for (int i = trackBarNumber - namesArray.Count(); i > 0; i--)
+                {
+                    string textArray = "Google Chrome " + (trackBarNumber - i + 1);
+                    namesArray.Add(textArray);
+                }
+            }
+            else if (trackBarNumber < namesArray.Count())
+            {
+                for (int i = namesArray.Count() - 1; i >= trackBarNumber; i--)
+                {
+                    namesArray.RemoveAt(i);
+                }
+            }
+        }
+
+        private void ChangeValuesOfValueArray()
+        {
+            for (int j = 0; j < valuesArray.Count(); j++)
+            {
+                if (valuesArray.ElementAt(j) > 100 || valuesArray.ElementAt(j) < 0)
+                {
+                    int number = CheckValue(valuesArray.ElementAt(j));
+                    valuesArray.RemoveAt(j);
+                    valuesArray.Insert(j, number);
+                }
+            }
+        }
 
         private int CheckValue(int v)
         {

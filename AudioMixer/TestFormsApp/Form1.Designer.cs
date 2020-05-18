@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.volumeMixerComp1 = new AudioMixer.VolumeMixerComp();
-            this.volumeMixerComp2 = new AudioMixer.VolumeMixerComp();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -44,53 +43,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
+            this.volumeMixerComp2 = new AudioMixer.VolumeMixerComp();
+            this.volumeMixerComp1 = new AudioMixer.VolumeMixerComp();
             this.SuspendLayout();
-            // 
-            // volumeMixerComp1
-            // 
-            this.volumeMixerComp1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.volumeMixerComp1.BackgroundColor = System.Drawing.Color.Empty;
-            this.volumeMixerComp1.Location = new System.Drawing.Point(674, 120);
-            this.volumeMixerComp1.Name = "volumeMixerComp1";
-            this.volumeMixerComp1.NamesArray = new string[0];
-            this.volumeMixerComp1.Size = new System.Drawing.Size(8, 8);
-            this.volumeMixerComp1.TabIndex = 0;
-            this.volumeMixerComp1.TickFrequencyValue = 0;
-            this.volumeMixerComp1.TrackBarColor = System.Drawing.Color.Empty;
-            this.volumeMixerComp1.TrackBarNameColor = System.Drawing.Color.Empty;
-            this.volumeMixerComp1.TrackBarNumber = 0;
-            this.volumeMixerComp1.TrackBarValueColor = System.Drawing.Color.Empty;
-            this.volumeMixerComp1.ValuesArray = new int[0];
-            // 
-            // volumeMixerComp2
-            // 
-            this.volumeMixerComp2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.volumeMixerComp2.BackgroundColor = System.Drawing.Color.Aqua;
-            this.volumeMixerComp2.Location = new System.Drawing.Point(153, 161);
-            this.volumeMixerComp2.Name = "volumeMixerComp2";
-            this.volumeMixerComp2.NamesArray = new string[] {
-        "Chrome",
-        "Opera",
-        "Egde",
-        "Internet Explorer",
-        "NetBeans",
-        "Visual Studio",
-        "Eclipse"};
-            this.volumeMixerComp2.Size = new System.Drawing.Size(570, 314);
-            this.volumeMixerComp2.TabIndex = 1;
-            this.volumeMixerComp2.TickFrequencyValue = 50;
-            this.volumeMixerComp2.TrackBarColor = System.Drawing.Color.Yellow;
-            this.volumeMixerComp2.TrackBarNameColor = System.Drawing.Color.Magenta;
-            this.volumeMixerComp2.TrackBarNumber = 5;
-            this.volumeMixerComp2.TrackBarValueColor = System.Drawing.Color.Green;
-            this.volumeMixerComp2.ValuesArray = new int[] {
-        -100,
-        150,
-        30,
-        70,
-        25,
-        13,
-        0};
             // 
             // button1
             // 
@@ -215,6 +170,38 @@
             this.button6.Text = "Change Frequency";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.Button6_Click);
+            // 
+            // volumeMixerComp2
+            // 
+            this.volumeMixerComp2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.volumeMixerComp2.BackgroundColor = System.Drawing.Color.Aqua;
+            this.volumeMixerComp2.Location = new System.Drawing.Point(169, 134);
+            this.volumeMixerComp2.Name = "volumeMixerComp2";
+            this.volumeMixerComp2.NamesArray.Add("Google Chrome 1");
+            this.volumeMixerComp2.NamesArray.Add("Google Chrome 2");
+            this.volumeMixerComp2.Size = new System.Drawing.Size(628, 357);
+            this.volumeMixerComp2.TabIndex = 1;
+            this.volumeMixerComp2.TickFrequencyValue = 100;
+            this.volumeMixerComp2.TrackBarColor = System.Drawing.Color.Yellow;
+            this.volumeMixerComp2.TrackBarNameColor = System.Drawing.Color.Magenta;
+            this.volumeMixerComp2.TrackBarNumber = 2;
+            this.volumeMixerComp2.TrackBarValueColor = System.Drawing.Color.Green;
+            this.volumeMixerComp2.ValuesArray = ((System.Collections.Generic.List<int>)(resources.GetObject("volumeMixerComp2.ValuesArray")));
+            // 
+            // volumeMixerComp1
+            // 
+            this.volumeMixerComp1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.volumeMixerComp1.BackgroundColor = System.Drawing.Color.Empty;
+            this.volumeMixerComp1.Location = new System.Drawing.Point(674, 120);
+            this.volumeMixerComp1.Name = "volumeMixerComp1";
+            this.volumeMixerComp1.Size = new System.Drawing.Size(8, 8);
+            this.volumeMixerComp1.TabIndex = 0;
+            this.volumeMixerComp1.TickFrequencyValue = 0;
+            this.volumeMixerComp1.TrackBarColor = System.Drawing.Color.Empty;
+            this.volumeMixerComp1.TrackBarNameColor = System.Drawing.Color.Empty;
+            this.volumeMixerComp1.TrackBarNumber = 0;
+            this.volumeMixerComp1.TrackBarValueColor = System.Drawing.Color.Empty;
+            this.volumeMixerComp1.ValuesArray = ((System.Collections.Generic.List<int>)(resources.GetObject("volumeMixerComp1.ValuesArray")));
             // 
             // Form1
             // 
