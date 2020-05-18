@@ -372,53 +372,72 @@ namespace AudioMixer
         }
         private void CheckValuesArray()
         {
-
-            if (trackBarNumber > valuesArray.Count())
+            try
             {
-                for (int i = trackBarNumber - valuesArray.Count(); i > 0; i--)
+                if (trackBarNumber > valuesArray.Count())
                 {
-                    valuesArray.Add(50);
+                    for (int i = trackBarNumber - valuesArray.Count(); i > 0; i--)
+                    {
+                        valuesArray.Add(50);
+                    }
                 }
-            }   
-            else if (trackBarNumber < valuesArray.Count())
-            {
-                for (int i = valuesArray.Count() - 1; i >= trackBarNumber; i--)
+                else if (trackBarNumber < valuesArray.Count())
                 {
-                    valuesArray.RemoveAt(i);
+                    for (int i = valuesArray.Count() - 1; i >= trackBarNumber; i--)
+                    {
+
+                        valuesArray.RemoveAt(i);
+                    }
                 }
             }
-
+            catch(Exception e)
+            {
+                throw e;
+            }
         }
 
         private void CheckNamesArray()
         {
-            if (trackBarNumber > namesArray.Count())
-            {
-                for (int i = trackBarNumber - namesArray.Count(); i > 0; i--)
+            try {
+                if (trackBarNumber > namesArray.Count())
                 {
-                    string textArray = "Google Chrome " + (trackBarNumber - i + 1);
-                    namesArray.Add(textArray);
+                    for (int i = trackBarNumber - namesArray.Count(); i > 0; i--)
+                    {
+                        string textArray = "Google Chrome " + (trackBarNumber - i + 1);
+                        namesArray.Add(textArray);
+                    }
+                }
+                else if (trackBarNumber < namesArray.Count())
+                {
+                    for (int i = namesArray.Count() - 1; i >= trackBarNumber; i--)
+                    {
+                        namesArray.RemoveAt(i);
+                    }
                 }
             }
-            else if (trackBarNumber < namesArray.Count())
+            catch (Exception e)
             {
-                for (int i = namesArray.Count() - 1; i >= trackBarNumber; i--)
-                {
-                    namesArray.RemoveAt(i);
-                }
+                throw e;
             }
         }
 
         private void ChangeValuesOfValueArray()
         {
-            for (int j = 0; j < valuesArray.Count(); j++)
+            try
             {
-                if (valuesArray.ElementAt(j) > 100 || valuesArray.ElementAt(j) < 0)
+                for (int j = 0; j < valuesArray.Count(); j++)
                 {
-                    int number = CheckValue(valuesArray.ElementAt(j));
-                    valuesArray.RemoveAt(j);
-                    valuesArray.Insert(j, number);
+                    if (valuesArray.ElementAt(j) > 100 || valuesArray.ElementAt(j) < 0)
+                    {
+                        int number = CheckValue(valuesArray.ElementAt(j));
+                        valuesArray.RemoveAt(j);
+                        valuesArray.Insert(j, number);
+                    }
                 }
+            }
+            catch(Exception e)
+            {
+                throw e;
             }
         }
 

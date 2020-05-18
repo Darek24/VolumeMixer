@@ -175,16 +175,21 @@
             // 
             this.volumeMixerComp2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.volumeMixerComp2.BackgroundColor = System.Drawing.Color.Aqua;
-            this.volumeMixerComp2.Location = new System.Drawing.Point(169, 134);
+            this.volumeMixerComp2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.volumeMixerComp2.Location = new System.Drawing.Point(28, 151);
             this.volumeMixerComp2.Name = "volumeMixerComp2";
             this.volumeMixerComp2.NamesArray.Add("Google Chrome 1");
             this.volumeMixerComp2.NamesArray.Add("Google Chrome 2");
-            this.volumeMixerComp2.Size = new System.Drawing.Size(628, 357);
+            this.volumeMixerComp2.NamesArray.Add("Google Chrome 3");
+            this.volumeMixerComp2.NamesArray.Add("Google Chrome 4");
+            this.volumeMixerComp2.NamesArray.Add("Google Chrome 5");
+            this.volumeMixerComp2.NamesArray.Add("Google Chrome 6");
+            this.volumeMixerComp2.Size = new System.Drawing.Size(868, 388);
             this.volumeMixerComp2.TabIndex = 1;
             this.volumeMixerComp2.TickFrequencyValue = 100;
             this.volumeMixerComp2.TrackBarColor = System.Drawing.Color.Yellow;
             this.volumeMixerComp2.TrackBarNameColor = System.Drawing.Color.Magenta;
-            this.volumeMixerComp2.TrackBarNumber = 2;
+            this.volumeMixerComp2.TrackBarNumber = 6;
             this.volumeMixerComp2.TrackBarValueColor = System.Drawing.Color.Green;
             this.volumeMixerComp2.ValuesArray = ((System.Collections.Generic.List<int>)(resources.GetObject("volumeMixerComp2.ValuesArray")));
             // 

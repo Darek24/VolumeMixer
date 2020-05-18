@@ -43,6 +43,8 @@
             this.mainPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.mainPanel.Size = new System.Drawing.Size(667, 367);
             this.mainPanel.TabIndex = 4;
+
+            this.mainPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             // 
             // VolumeMixerComp
             // 
