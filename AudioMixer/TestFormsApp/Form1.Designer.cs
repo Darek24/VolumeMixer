@@ -44,7 +44,6 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.volumeMixerComp2 = new AudioMixer.VolumeMixerComp();
-            this.volumeMixerComp1 = new AudioMixer.VolumeMixerComp();
             this.SuspendLayout();
             // 
             // button1
@@ -193,21 +192,6 @@
             this.volumeMixerComp2.TrackBarValueColor = System.Drawing.Color.Green;
             this.volumeMixerComp2.ValuesArray = ((System.Collections.Generic.List<int>)(resources.GetObject("volumeMixerComp2.ValuesArray")));
             // 
-            // volumeMixerComp1
-            // 
-            this.volumeMixerComp1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.volumeMixerComp1.BackgroundColor = System.Drawing.Color.Empty;
-            this.volumeMixerComp1.Location = new System.Drawing.Point(674, 120);
-            this.volumeMixerComp1.Name = "volumeMixerComp1";
-            this.volumeMixerComp1.Size = new System.Drawing.Size(8, 8);
-            this.volumeMixerComp1.TabIndex = 0;
-            this.volumeMixerComp1.TickFrequencyValue = 0;
-            this.volumeMixerComp1.TrackBarColor = System.Drawing.Color.Empty;
-            this.volumeMixerComp1.TrackBarNameColor = System.Drawing.Color.Empty;
-            this.volumeMixerComp1.TrackBarNumber = 0;
-            this.volumeMixerComp1.TrackBarValueColor = System.Drawing.Color.Empty;
-            this.volumeMixerComp1.ValuesArray = ((System.Collections.Generic.List<int>)(resources.GetObject("volumeMixerComp1.ValuesArray")));
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -228,7 +212,6 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.volumeMixerComp2);
-            this.Controls.Add(this.volumeMixerComp1);
             this.Name = "Form1";
             this.Text = "Test Form";
             this.ResumeLayout(false);
