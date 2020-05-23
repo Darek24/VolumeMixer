@@ -17,9 +17,9 @@ namespace AudioMixer
         List<TrackBar> trackBarList;
         List<TableLayoutPanel> panelList;
 
-        
+
         List<string> namesArray = new List<string> { };
-        List<int> valuesArray = new List<int> ();
+        List<int> valuesArray = new List<int>();
 
         int trackBarNumber, tickFrequencyValue;
         Color backgroundColor, trackBarColor, trackBarNameColor, trackBarValueColor;
@@ -116,14 +116,14 @@ namespace AudioMixer
                 SetEveryTrackBarName();
                 Invalidate();
                 return namesArray;
-             
+
             }
             set
             {
                 namesArray = value;
                 SetEveryTrackBarName();
                 Invalidate();
-            }   
+            }
         }
 
 
@@ -167,7 +167,7 @@ namespace AudioMixer
             InitializeComponent();
 
             InitializeLists();
-            
+
         }
 
         private void InitializeLists()
@@ -286,7 +286,7 @@ namespace AudioMixer
         }
 
 
-        public void SetTrackBarValueAt(int i, int value )
+        public void SetTrackBarValueAt(int i, int value)
         {
             try
             {
@@ -294,7 +294,7 @@ namespace AudioMixer
                 numberList[i].Text = CheckValue(value).ToString();
                 Invalidate();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 throw e;
             }
@@ -331,11 +331,11 @@ namespace AudioMixer
             {
                 List<int> tab = valuesArray;
                 int n = tab.Count();
-                if(tab.Count()>=trackBarNumber)
+                if (tab.Count() >= trackBarNumber)
                 {
                     n = trackBarNumber;
                 }
-                for (int i = 0; i < n ; i++)
+                for (int i = 0; i < n; i++)
                 {
                     SetTrackBarValueAt(i, tab.ElementAt(i));
                 }
@@ -390,7 +390,7 @@ namespace AudioMixer
                     }
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 throw e;
             }
@@ -435,7 +435,7 @@ namespace AudioMixer
                     }
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 throw e;
             }
@@ -443,11 +443,11 @@ namespace AudioMixer
 
         private int CheckValue(int v)
         {
-            if(v<0)
+            if (v < 0)
             {
                 return 0;
             }
-            else if(v>100)
+            else if (v > 100)
             {
                 return 100;
             }
@@ -538,6 +538,50 @@ namespace AudioMixer
             numberList[i].Text = tkbar.Value.ToString();
 
         }
+        public void ValidateUserEntry(int id, string name, int value)
+        {
+            string message = null;
+            if (!(id <= namesArray.Count && id >= 0))
+            {
+                message = "Wprowadzono błędny index\n";
+            }
+            if (name.Length > 20)
+            {
+                message += "Zadługa nazwa słupka\n";
+            }
+            if (!(value >= 0 && (value <= 100)))
+            {
+                message += "Nie prawidłowa wartość";
+            }
 
+            if (message != null) {
+
+                string caption = "Wprowadzono błędne dane";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                DialogResult result;
+
+                // Displays the MessageBox.
+                result = MessageBox.Show(message, caption, buttons);
+                if (result == System.Windows.Forms.DialogResult.OK)
+                {
+                    throw new System.ArgumentException();
+
+                }
+            }
+        }
+
+        public void ValidateUserData()
+        {
+            string message = "Błędny format danych";
+            string caption = "Wprowadzono błędne dane";
+            MessageBoxButtons buttons = MessageBoxButtons.OK;
+            DialogResult result;
+
+            // Displays the MessageBox.
+            result = MessageBox.Show(message, caption, buttons);
+            if (result == System.Windows.Forms.DialogResult.OK)
+            {
+            }
+        }
     }
 }

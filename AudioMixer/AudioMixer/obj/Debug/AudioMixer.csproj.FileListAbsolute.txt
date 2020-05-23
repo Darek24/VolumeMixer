@@ -8,3 +8,12 @@ C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\AudioMixer\obj\Debug\AudioMix
 C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\AudioMixer\bin\Debug\AudioMixer.dll.config
 C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\AudioMixer\bin\Debug\AudioMixer.dll
 C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\AudioMixer\obj\Debug\AudioMixer.dll
+C:\Users\User\Source\Repos\VolumeMixer\AudioMixer\AudioMixer\bin\Debug\AudioMixer.dll.config
+C:\Users\User\Source\Repos\VolumeMixer\AudioMixer\AudioMixer\bin\Debug\AudioMixer.dll
+C:\Users\User\Source\Repos\VolumeMixer\AudioMixer\AudioMixer\bin\Debug\AudioMixer.pdb
+C:\Users\User\Source\Repos\VolumeMixer\AudioMixer\AudioMixer\obj\Debug\AudioMixer.csprojAssemblyReference.cache
+C:\Users\User\Source\Repos\VolumeMixer\AudioMixer\AudioMixer\obj\Debug\AudioMixer.Properties.Resources.resources
+C:\Users\User\Source\Repos\VolumeMixer\AudioMixer\AudioMixer\obj\Debug\AudioMixer.VolumeMixerComp.resources
+C:\Users\User\Source\Repos\VolumeMixer\AudioMixer\AudioMixer\obj\Debug\AudioMixer.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\VolumeMixer\AudioMixer\AudioMixer\obj\Debug\AudioMixer.dll
+C:\Users\User\Source\Repos\VolumeMixer\AudioMixer\AudioMixer\obj\Debug\AudioMixer.pdb

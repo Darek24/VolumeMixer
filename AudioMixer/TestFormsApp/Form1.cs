@@ -32,20 +32,29 @@ namespace TestFormsApp
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(textBox1.Text)-1;
-            string name = textBox2.Text;
-            int value = int.Parse(textBox3.Text);
+            try
+            {
+                int id = int.Parse(textBox1.Text) - 1;
+                string name = textBox2.Text;
+                int value = int.Parse(textBox3.Text);
 
-            volumeMixerComp2.SetTrackBarNameAt(id,name);
-            volumeMixerComp2.SetTrackBarValueAt(id, value);
+                volumeMixerComp2.ValidateUserEntry(id, name, value);
+                volumeMixerComp2.SetTrackBarNameAt(id, name);
+                volumeMixerComp2.SetTrackBarValueAt(id, value);
 
-            ColorDialog MyDialog = new ColorDialog();
-            MyDialog.AllowFullOpen = false;
-            MyDialog.ShowHelp = true;
-            MyDialog.Color = textBox1.ForeColor;
+                ColorDialog MyDialog = new ColorDialog();
+                MyDialog.AllowFullOpen = false;
+                MyDialog.ShowHelp = true;
+                MyDialog.Color = textBox1.ForeColor;
 
-            if (MyDialog.ShowDialog() == DialogResult.OK)
-                volumeMixerComp2.SetTrackBarColorAt(id, MyDialog.Color);
+                if (MyDialog.ShowDialog() == DialogResult.OK)
+                    volumeMixerComp2.SetTrackBarColorAt(id, MyDialog.Color);
+            }
+            catch (ArgumentException aex){ }
+            catch (Exception ex)
+            {
+                volumeMixerComp2.ValidateUserData();
+            }
 
         }
 
