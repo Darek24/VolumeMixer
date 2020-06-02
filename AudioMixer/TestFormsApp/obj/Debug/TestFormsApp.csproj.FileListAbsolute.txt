@@ -25,3 +25,4 @@ C:\Users\User\Source\Repos\VolumeMixer\AudioMixer\TestFormsApp\obj\Debug\TestFor
 C:\Users\User\Source\Repos\VolumeMixer\AudioMixer\TestFormsApp\obj\Debug\TestFormsApp.csproj.CopyComplete
 C:\Users\User\Source\Repos\VolumeMixer\AudioMixer\TestFormsApp\obj\Debug\TestFormsApp.exe
 C:\Users\User\Source\Repos\VolumeMixer\AudioMixer\TestFormsApp\obj\Debug\TestFormsApp.pdb
+C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\TestFormsApp\bin\Debug\AudioMixer.xml

@@ -183,7 +183,7 @@
             this.volumeMixerComp2.NamesArray.Add("Google Chrome 4");
             this.volumeMixerComp2.NamesArray.Add("Google Chrome 5");
             this.volumeMixerComp2.NamesArray.Add("Google Chrome 6");
-            this.volumeMixerComp2.Size = new System.Drawing.Size(868, 388);
+            this.volumeMixerComp2.Size = new System.Drawing.Size(877, 388);
             this.volumeMixerComp2.TabIndex = 1;
             this.volumeMixerComp2.TickFrequencyValue = 100;
             this.volumeMixerComp2.TrackBarColor = System.Drawing.Color.Yellow;
@@ -220,8 +220,6 @@
         }
 
         #endregion
-
-        private AudioMixer.VolumeMixerComp volumeMixerComp1;
         private AudioMixer.VolumeMixerComp volumeMixerComp2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

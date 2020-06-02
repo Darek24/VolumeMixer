@@ -17,3 +17,8 @@ C:\Users\User\Source\Repos\VolumeMixer\AudioMixer\AudioMixer\obj\Debug\AudioMixe
 C:\Users\User\Source\Repos\VolumeMixer\AudioMixer\AudioMixer\obj\Debug\AudioMixer.csproj.GenerateResource.cache
 C:\Users\User\Source\Repos\VolumeMixer\AudioMixer\AudioMixer\obj\Debug\AudioMixer.dll
 C:\Users\User\Source\Repos\VolumeMixer\AudioMixer\AudioMixer\obj\Debug\AudioMixer.pdb
+C:\Users\dariu\Desktop\AudioMixer.dll.config
+C:\Users\dariu\Desktop\AudioMixer.dll
+C:\Users\dariu\Desktop\AudioMixer.pdb
+C:\Users\dariu\Desktop\AudioMixer.xml
+C:\Users\dariu\source\repos\VolumeMixer\AudioMixer\AudioMixer\bin\Debug\AudioMixer.xml

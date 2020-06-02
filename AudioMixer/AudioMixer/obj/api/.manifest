@@ -1,0 +1,19 @@
+{
+  "AudioMixer": "AudioMixer.yml",
+  "AudioMixer.VolumeMixerComp": "AudioMixer.VolumeMixerComp.yml",
+  "AudioMixer.VolumeMixerComp.#ctor": "AudioMixer.VolumeMixerComp.yml",
+  "AudioMixer.VolumeMixerComp.BackgroundColor": "AudioMixer.VolumeMixerComp.yml",
+  "AudioMixer.VolumeMixerComp.Dispose(System.Boolean)": "AudioMixer.VolumeMixerComp.yml",
+  "AudioMixer.VolumeMixerComp.NamesArray": "AudioMixer.VolumeMixerComp.yml",
+  "AudioMixer.VolumeMixerComp.SetTrackBarColorAt(System.Int32,System.Drawing.Color)": "AudioMixer.VolumeMixerComp.yml",
+  "AudioMixer.VolumeMixerComp.SetTrackBarNameAt(System.Int32,System.String)": "AudioMixer.VolumeMixerComp.yml",
+  "AudioMixer.VolumeMixerComp.SetTrackBarValueAt(System.Int32,System.Int32)": "AudioMixer.VolumeMixerComp.yml",
+  "AudioMixer.VolumeMixerComp.TickFrequencyValue": "AudioMixer.VolumeMixerComp.yml",
+  "AudioMixer.VolumeMixerComp.TrackBarColor": "AudioMixer.VolumeMixerComp.yml",
+  "AudioMixer.VolumeMixerComp.TrackBarNameColor": "AudioMixer.VolumeMixerComp.yml",
+  "AudioMixer.VolumeMixerComp.TrackBarNumber": "AudioMixer.VolumeMixerComp.yml",
+  "AudioMixer.VolumeMixerComp.TrackBarValueColor": "AudioMixer.VolumeMixerComp.yml",
+  "AudioMixer.VolumeMixerComp.ValidateUserData": "AudioMixer.VolumeMixerComp.yml",
+  "AudioMixer.VolumeMixerComp.ValidateUserEntry(System.Int32,System.String,System.Int32)": "AudioMixer.VolumeMixerComp.yml",
+  "AudioMixer.VolumeMixerComp.ValuesArray": "AudioMixer.VolumeMixerComp.yml"
+}

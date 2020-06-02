@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: AudioMixer
+  commentId: N:AudioMixer
+  id: AudioMixer
+  children:
+  - AudioMixer.VolumeMixerComp
+  langs:
+  - csharp
+  - vb
+  name: AudioMixer
+  nameWithType: AudioMixer
+  fullName: AudioMixer
+  type: Namespace
+  assemblies:
+  - AudioMixer
+references:
+- uid: AudioMixer.VolumeMixerComp
+  commentId: T:AudioMixer.VolumeMixerComp
+  name: VolumeMixerComp
+  nameWithType: VolumeMixerComp
+  fullName: AudioMixer.VolumeMixerComp

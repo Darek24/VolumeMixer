@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AudioMixer</name>
+    </assembly>
+    <members>
+        <member name="T:AudioMixer.VolumeMixerComp">
+            <summary>
+            The main VolumeMixerComp class
+            </summary>
+            <seealso cref="T:System.Windows.Forms.UserControl" />
+        </member>
+        <member name="P:AudioMixer.VolumeMixerComp.TrackBarNumber">
+            <summary>Gets or sets the track bar number.</summary>
+            <value>The track bar number.</value>
+        </member>
+        <member name="P:AudioMixer.VolumeMixerComp.BackgroundColor">
+            <summary>
+            Gets or sets the color of the background.
+            </summary>
+            <value>
+            The color of the background.
+            </value>
+        </member>
+        <member name="P:AudioMixer.VolumeMixerComp.TrackBarColor">
+            <summary>
+            Gets or sets the color of the track bar.
+            </summary>
+            <value>
+            The color of the track bar.
+            </value>
+        </member>
+        <member name="P:AudioMixer.VolumeMixerComp.TrackBarNameColor">
+            <summary>
+            Gets or sets the color of the track bar name.
+            </summary>
+            <value>
+            The color of the track bar name.
+            </value>
+        </member>
+        <member name="P:AudioMixer.VolumeMixerComp.TrackBarValueColor">
+            <summary>
+            Gets or sets the color of the track bar value.
+            </summary>
+            <value>
+            The color of the track bar value.
+            </value>
+        </member>
+        <member name="P:AudioMixer.VolumeMixerComp.NamesArray">
+            <summary>
+            Gets or sets the names array.
+            </summary>
+            <value>
+            The names array.
+            </value>
+        </member>
+        <member name="P:AudioMixer.VolumeMixerComp.ValuesArray">
+            <summary>
+            Gets or sets the values array.
+            </summary>
+            <value>
+            The values array.
+            </value>
+        </member>
+        <member name="P:AudioMixer.VolumeMixerComp.TickFrequencyValue">
+            <summary>
+            Gets or sets the tick frequency value.
+            </summary>
+            <value>
+            The tick frequency value.
+            </value>
+        </member>
+        <member name="M:AudioMixer.VolumeMixerComp.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AudioMixer.VolumeMixerComp" /> class.
+            </summary>
+        </member>
+        <member name="M:AudioMixer.VolumeMixerComp.InitializeLists">
+            <summary>
+            Initializes the lists.
+            </summary>
+        </member>
+        <member name="M:AudioMixer.VolumeMixerComp.RemoveTrackBars">
+            <summary>
+            Removes the track bars.
+            </summary>
+        </member>
+        <member name="M:AudioMixer.VolumeMixerComp.CreateTrackBars">
+            <summary>
+            Creates the track bars.
+            </summary>
+        </member>
+        <member name="M:AudioMixer.VolumeMixerComp.SetTrackBarValueAt(System.Int32,System.Int32)">
+            <summary>
+            Sets the track bar value at.
+            </summary>
+            <param name="i">The i.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:AudioMixer.VolumeMixerComp.SetTrackBarNameAt(System.Int32,System.String)">
+            <summary>
+            Sets the track bar name at.
+            </summary>
+            <param name="i">The i.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:AudioMixer.VolumeMixerComp.SetTrackBarColorAt(System.Int32,System.Drawing.Color)">
+            <summary>
+            Sets the track bar color at.
+            </summary>
+            <param name="i">The i.</param>
+            <param name="color">The color.</param>
+        </member>
+        <member name="M:AudioMixer.VolumeMixerComp.SetEveryTrackBarValue">
+            <summary>
+            Sets the every track bar value.
+            </summary>
+        </member>
+        <member name="M:AudioMixer.VolumeMixerComp.SetEveryTrackBarName">
+            <summary>
+            Sets the name of the every track bar.
+            </summary>
+        </member>
+        <member name="M:AudioMixer.VolumeMixerComp.CheckValuesArray">
+            <summary>
+            Checks the values array.
+            </summary>
+        </member>
+        <member name="M:AudioMixer.VolumeMixerComp.CheckNamesArray">
+            <summary>
+            Checks the names array.
+            </summary>
+        </member>
+        <member name="M:AudioMixer.VolumeMixerComp.ChangeValuesOfValueArray">
+            <summary>
+            Changes the values of value array.
+            </summary>
+        </member>
+        <member name="M:AudioMixer.VolumeMixerComp.CheckValue(System.Int32)">
+            <summary>
+            Checks the value.
+            </summary>
+            <param name="v">The v.</param>
+            <returns></returns>
+        </member>
+        <member name="M:AudioMixer.VolumeMixerComp.SetEveryNameColor">
+            <summary>
+            Sets the color of the every name.
+            </summary>
+        </member>
+        <member name="M:AudioMixer.VolumeMixerComp.SetEveryValueColor">
+            <summary>
+            Sets the color of the every value.
+            </summary>
+        </member>
+        <member name="M:AudioMixer.VolumeMixerComp.SetEveryTrackBarColor">
+            <summary>
+            Sets the color of the every track bar.
+            </summary>
+        </member>
+        <member name="M:AudioMixer.VolumeMixerComp.SetBackgroundColor">
+            <summary>
+            Sets the color of the background.
+            </summary>
+        </member>
+        <member name="M:AudioMixer.VolumeMixerComp.SetTickFrequencyValue">
+            <summary>
+            Sets the tick frequency value.
+            </summary>
+        </member>
+        <member name="M:AudioMixer.VolumeMixerComp.TrackBar_Scroll(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Scroll event of the TrackBar control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs" /> instance containing the event data.</param>
+        </member>
+        <member name="M:AudioMixer.VolumeMixerComp.ValidateUserEntry(System.Int32,System.String,System.Int32)">
+            <summary>
+            Validates the user entry.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="name">The name.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:AudioMixer.VolumeMixerComp.ValidateUserData">
+            <summary>
+            Validates the user data.
+            </summary>
+        </member>
+        <member name="F:AudioMixer.VolumeMixerComp.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:AudioMixer.VolumeMixerComp.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:AudioMixer.VolumeMixerComp.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:AudioMixer.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:AudioMixer.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:AudioMixer.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>
